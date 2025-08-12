@@ -1,0 +1,465 @@
+/*TO-DO 
+-hacer la maquetacion del formulario 
+ */
+
+body { /*reseteo del body*/
+margin: 0px;
+}
+
+.estrella {  /* Logo de estrella*/
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.barra {   /*contenedor de la barra de navegacion */
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: #C1E9E4;
+    border-radius: 30px;
+    margin-top: 25px;
+    margin-left: 10%;
+    width: 1170px;
+    height: 50px;
+    padding: 5px 70px 5px 20px;
+    box-shadow: 3px 3px 4px rgba(88, 86, 86, 0.5);
+}
+
+.icon {  /* icon del home*/
+    cursor: pointer;
+    max-width: 40px;
+    max-height: 37px;
+    margin-left: 20px;
+}
+
+.btn-sesion { /*Boton de Iniciar sesion */
+    font-size: small;
+    border-width: 1px;
+    border-radius:10px;
+    padding: 10px;
+    background-color: #dfb8e9;
+    position: absolute;
+    top: 10px;
+    min-width: 150px;
+    right: 10px;
+    margin-left: 50px;
+}
+
+.btn-sesion:hover{ /* Boton de sesion , cambia el color al pasar el cursor */
+    background-color:rgba(88, 86, 86, 0.5);
+}
+
+.search-text {  /* Contenedor de las busquedas*/
+   width: 500px;
+   height: 40px;
+   border: 0px;
+   border-radius: 20px;
+   position: relative;
+   margin-top: 5px;
+   margin-left: 100px;
+   padding-left: 20px;
+  box-shadow: 2px 2px 4px rgb(128, 128, 128 ,0.5);
+}
+
+.search-text:focus {  /* pseudoclase para darle un borde interno*/
+    outline: 3px solid #dfb8e9;
+}
+
+.search {  /* Icono de lupa*/
+    margin: 0%;
+    border: 0px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top:13px;
+    left: 610px;
+    background-color: white;
+   
+}
+
+
+.list {  /* Lista de navegacion */
+    align-items: center;
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+
+.list-color {  /*Cambios de estilo a la lista*/
+    text-decoration: none;
+    color: black;
+}
+
+.list-color:hover{  /*Cambio de color al ser visitado  */
+    font-size: 20px;
+    color: #d24ed0;
+}
+
+.title { /* Frase motivadora*/
+    justify-content: center;
+    font-family: Raleway;
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 13px;
+    padding-left: 200px;
+}
+
+.barra-decoration { /* Barra decorativa*/
+    display: flex;
+    background-color: #C1E9E4;
+    width: 1490px;
+    height: 30px;
+    margin-left: 20px;
+    box-shadow: 3px 3px 4px rgba(120, 116, 116, 0.5);
+   
+}
+
+.image  {  /* imagenes de presentacion */
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    height: 315px;
+    padding: 20px;
+    margin-left: 75px;
+}  
+
+.description {  /* Descripcion */
+    background-color: #C1E9E4;
+    border-radius: 30px;
+    width: 980px;
+    height: 80px;
+    padding: 10px;
+    position: absolute;
+    left: 20%;
+    box-shadow: 3px 3px 4px rgba(120, 116, 116, 0.5);
+   
+}
+
+/* GALERIA DE LOS CURSOS */
+
+.title-curses { /*Titulo de los cursos*/
+    font-size: 32px;
+    margin: 5px 0px;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 300px;
+    color: #FFFFFF;
+}
+
+.title-curses h2 { /*posicionamiento sin margen*/
+    margin: 0;
+}
+
+
+.content-curses { /*Contenedor-cursos*/
+    background-color:rgba(176, 140, 189, 0.8);   ;
+    position: relative;
+    top: 100px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px 30px 0px;
+}
+
+.content-cards ,
+.content-card
+{ /*Contenedores de la galeria*/
+    width: 395px;
+    height: 425px;
+    background-color: white;
+    border-radius: 50px ;
+    margin: 8px;
+    
+    
+}
+
+.image-cards { /*imagenes*/
+    width: 395px;
+    height: 259px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.content-curses h4 { /*Titulos-cursos*/
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: Sansation Light;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.content-curses p{  /*Parrafo de los cursos*/
+    margin: 0px 24px;
+}
+
+.btn-curses {   /*Boton de acceder*/
+    margin-top: 20px;
+    margin-left: 90px;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-family: Aboreto;
+    min-width: 207px;
+    border-radius: 50px;
+    font-size: larger;
+    cursor: pointer;
+    
+}
+
+.btn-curses:hover { /*estilo del boton*/
+    background-color: #252525;
+    width: 210px ;
+}
+
+/*SLIDER DE IMAGENES*/
+
+
+.content-slider { /*Contenedor del slider*/
+    position: relative;
+    top: 200px;
+    left: 75px;
+    width: 90vw;
+    height: 300px;
+    overflow: hidden;
+
+        
+ }
+    
+.content-slider .list-layer{
+    display: flex;
+    animation: carrusel 30s linear infinite;
+    width: calc(400px*10);
+}
+
+.content-slider 
+.item {
+    width: 400px;
+    height: 300px; 
+    margin-left: 10px;
+   
+}
+
+    
+.content-slider
+ .list-layer 
+ .item 
+ img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+@keyframes carrusel {
+    from{
+        transform: translateX(0);
+    }
+    to {
+       transform: translateX(calc(-400px*5));
+    }
+
+}
+
+
+
+.title-instalaciones {  /*Titulo de las instalaciones*/
+    display: flex;
+    position: relative;
+}
+
+.title-instalaciones h2 { /*margen-titulo*/
+    position: absolute;
+    top: 150px;
+    left: 660px;
+    font-size: 34px;
+    letter-spacing: 10px;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/*SECCION DE UBICACION Y HORARIOS*/
+
+.location-image { /*imagen-ubicacion */ 
+    width: 288px;
+    height: 151px;
+
+}
+
+.content-location { /* contenedor de la ubicacion y horarios*/ 
+    position: relative;
+    top: 300px;
+    left: 340px;
+    border: 1px solid #000;
+    width: 831px;
+    height: 170px;
+    border-radius: 25px;
+    padding: 8px;
+}
+
+
+
+.content-location >h4 { /* selector de hijo directos */
+    display: inline;
+    position: absolute;
+    top: 0px;
+    right: 200px;
+
+}
+
+.position-text1 { /*Posicion del horario 8:00am  a 10:00pm*/
+     display: inline;
+     margin-left: 30px;
+     position: absolute;
+     top:33px;
+     font-family: Raleway;
+     font-size: 16px;
+     font-weight: 400;
+}
+
+.position-text2 { /*Posicion del horario 8:00am  a 10:00pm*/
+    display: inline;
+    margin-left: 45px;
+    position: absolute;
+    top:50px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.position-text3 { /*Posicion del horario  lado derecho*/
+    display: inline;
+    margin-left: 30px;
+    position: absolute;
+    top:33px;
+    right: 52px;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.position-text4 { /* sabados y domingos*/
+    display: inline;
+    margin-left: 45px;
+    position: absolute;
+    top:52px;
+    right: 50px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.position-text5{ /*direccion */
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    font-family: Raleway;
+    font-size: 14px;
+}
+
+.position-text6{ /*direccion-sede */
+    position: absolute;
+    top: 120px;
+    left: 550px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+/*------------------FOOTER---------------------*/
+
+.content-footer img { /* redes-sociales */
+    height: 50px;
+    width: 50px;
+    padding-right: 5px;
+}
+
+.footer {  /* footer*/
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #000;
+    margin-top: 400px;
+
+}
+
+.white-text { /* texto-blanco*/
+    color: #FFFFFF;
+    font-family: Raleway;
+}
+
+.content-footer { /*contenedor-footer-social*/
+    display: inline-block;
+    position: absolute;
+    top: 230px;
+    right: 0;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.content-footer h3 {  /*estilos-Preguntas*/
+    font-weight: 200;
+    margin-left: 25px;
+}
+
+
+.position-gym {  /* posicion del texto-gym */
+    position: absolute;
+    left: 600px;
+    font-size: 128px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+
+.position-gym a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.questions {  /*estilos-letras-preguntas*/
+ font-size: 25px;
+ font-weight: 200;
+}
+
+.qst-1 {  /* posicion-pregunta1*/
+    position: absolute;
+    top: 100px;
+    margin-left: 15px;
+}
+
+.qst-2 { /* posicion-pregunta2*/
+    position: absolute;
+    top: 150px;
+    margin-left: 15px;
+}
+
+.qst-3 {  /* posicion-pregunta3*/
+    position: absolute;
+    top: 200px;
+    margin-left: 15px;
+}
+
+.text-copyright {   /* estilos-copyright*/
+    position: absolute;
+   top: 290px;
+   right: 400px;
+   width: 350px;
+   font-weight: lighter;
+}
+
+.footer >h3:hover { /*estilos de link a las questions*/
+  cursor: pointer;
+  color: #d24ed0;
+}
+
+.content-footer >img:hover { /*estilos redes-sociales */
+    cursor: pointer;
+}
+

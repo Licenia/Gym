@@ -1,0 +1,163 @@
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFF8F8;
+}
+
+html {
+    font-family: Raleway;
+}
+
+.container {
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center;      /* Centra los elementos verticalmente */
+    height: 100vh;      
+}
+
+.container-ovalo {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 25vw;
+    height: 70vh;
+    border-radius: 50%;
+    margin: 50px;
+    align-items: center;
+    flex-direction: column;   /* Para que los elementos dentro se apilen verticalmente */
+    justify-content: center;  /* Centra los elementos dentro del contenedor */
+    align-items: center;
+    padding: 20px;
+}
+
+.container-ovalo h2 {
+    text-align: center;
+    color: #B08CBD;
+}
+
+.container-ovalo ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-ovalo ul li {
+    padding: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-curses {
+    padding: 10px;
+   width: 60%;
+   max-width: 250px;
+   border-radius: 8px;
+   background-color: #FFF8F8;
+   font-weight: 400;
+   font-size: 20px;
+}
+
+.btn-curses a {
+    text-decoration: none;
+}
+
+
+.btn-curses :hover {
+    cursor: pointer;
+}
+
+/*------------------FOOTER---------------------*/
+
+.content-footer img { /* redes-sociales */
+    height: 50px;
+    width: 50px;
+    padding-right: 5px;
+}
+
+.footer {  /* footer*/
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #000;
+}
+
+.white-text { /* texto-blanco*/
+    color: #FFFFFF;
+    font-family: Raleway;
+}
+
+.content-footer { /*contenedor-footer-social*/
+    display: inline-block;
+    position: absolute;
+    top: 230px;
+    right: 0;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.content-footer h3 {  /*estilos-Preguntas*/
+    font-weight: 200;
+    margin-left: 25px;
+}
+
+
+.position-gym {  /* posicion del texto-gym */
+    position: absolute;
+    left: 600px;
+    font-size: 128px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+
+.position-gym a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.questions {  /*estilos-letras-preguntas*/
+ font-size: 25px;
+ font-weight: 200;
+}
+
+.qst-1 {  /* posicion-pregunta1*/
+    position: absolute;
+    top: 100px;
+    margin-left: 15px;
+}
+
+.qst-2 { /* posicion-pregunta2*/
+    position: absolute;
+    top: 150px;
+    margin-left: 15px;
+}
+
+.qst-3 {  /* posicion-pregunta3*/
+    position: absolute;
+    top: 200px;
+    margin-left: 15px;
+}
+
+.text-copyright {   /* estilos-copyright*/
+    position: absolute;
+   top: 290px;
+   right: 400px;
+   width: 350px;
+   font-weight: lighter;
+}
+
+.footer >h3:hover { /*estilos de link a las questions*/
+  cursor: pointer;
+  color: #d24ed0;
+}
+
+.content-footer >img:hover { /*estilos redes-sociales */
+    cursor: pointer;
+}
