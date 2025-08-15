@@ -5,29 +5,35 @@
     margin: 0px;
 }
 
-.estrella {
-  /* Logo de estrella*/
-  position: absolute;
-  top: 0px;
-  left: 30px;
-  width: 300px;
-  height: 250px;
-  cursor: pointer;
+.container-posicionamiento{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.barra {
-  /*contenedor de la barra de navegacion */
+.container-barra{
   display: flex;
-  justify-content: space-around;
-  position: relative;
+  justify-content: space-around; 
+  align-items: center;
   background-color: #c1e9e4;
   border-radius: 30px;
-  margin-top: 25px;
-  margin-left: 10%;
-  width: 1170px;
-  height: 50px;
-  padding: 5px 70px 5px 20px;
   box-shadow: 3px 3px 4px rgba(88, 86, 86, 0.5);
+  height: 50px;
+  padding: 5px ;
+  width: 80%;
+
+}
+
+.barra-buscar {
+  /*contenedor de la barra de navegacion */
+  display: flex;
+}
+
+.estrella {
+  /* Logo de estrella*/
+  width: 100px;
+  cursor: pointer;
 }
 
 .icon {
@@ -45,11 +51,7 @@
   border-radius: 10px;
   padding: 10px;
   background-color: #dfb8e9;
-  position: absolute;
-  top: 10px;
   min-width: 150px;
-  right: 10px;
-  margin-left: 50px;
 }
 
 .btn-sesion:hover {
@@ -59,13 +61,11 @@
 
 .search-text {
   /* Contenedor de las busquedas*/
-  width: 500px;
+  width: 50%;
   height: 40px;
   border: 0px;
   border-radius: 20px;
   position: relative;
-  margin-top: 5px;
-  margin-left: 100px;
   padding-left: 20px;
   box-shadow: 2px 2px 4px rgb(128, 128, 128, 0.5);
 }
@@ -81,9 +81,6 @@
   border: 0px;
   padding: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 13px;
-  left: 610px;
   background-color: white;
 }
 
@@ -91,7 +88,7 @@
   /* Lista de navegacion */
   align-items: center;
   cursor: pointer;
-  padding-left: 40px;
+  padding: 0;
 }
 
 .list-color {
@@ -102,7 +99,6 @@
 
 .list-color:hover {
   /*Cambio de color al ser visitado  */
-  font-size: 20px;
   color: #d24ed0;
 }
 
@@ -120,15 +116,19 @@
   /* Barra decorativa*/
   display: flex;
   background-color: #c1e9e4;
-  width: 1490px;
+  width: 100%;
   height: 30px;
   margin-left: 20px;
   box-shadow: 3px 3px 4px rgba(120, 116, 116, 0.5);
 }
 
+.container-image{
+  display: flex;
+  width: 100%;
+}
+
 .image {
   /* imagenes de presentacion */
-  display: flex;
   justify-content: space-between;
   width: 390px;
   height: 315px;
@@ -379,105 +379,4 @@
   font-family: Raleway;
   font-size: 14px;
   font-weight: 200;
-}
-
-/*------------------FOOTER---------------------*/
-
-.content-footer img {
-  /* redes-sociales */
-  height: 50px;
-  width: 50px;
-  padding-right: 5px;
-}
-
-.footer {
-  /* footer*/
-  position: relative;
-  width: 100%;
-  height: 350px;
-  background-color: #000;
-  margin-top: 400px;
-}
-
-.white-text {
-  /* texto-blanco*/
-  color: #ffffff;
-  font-family: Raleway;
-}
-
-.content-footer {
-  /*contenedor-footer-social*/
-  display: inline-block;
-  position: absolute;
-  top: 230px;
-  right: 0;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.content-footer h3 {
-  /*estilos-Preguntas*/
-  font-weight: 200;
-  margin-left: 25px;
-}
-
-.position-gym {
-  /* posicion del texto-gym */
-  position: absolute;
-  left: 600px;
-  font-size: 128px;
-  font-weight: 800;
-  letter-spacing: 5px;
-}
-
-.position-gym a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.questions {
-  /*estilos-letras-preguntas*/
-  font-size: 25px;
-  font-weight: 200;
-}
-
-.qst-1 {
-  /* posicion-pregunta1*/
-  position: absolute;
-  top: 100px;
-  margin-left: 15px;
-}
-
-.qst-2 {
-  /* posicion-pregunta2*/
-  position: absolute;
-  top: 150px;
-  margin-left: 15px;
-}
-
-.qst-3 {
-  /* posicion-pregunta3*/
-  position: absolute;
-  top: 200px;
-  margin-left: 15px;
-}
-
-.text-copyright {
-  /* estilos-copyright*/
-  position: absolute;
-  top: 290px;
-  right: 400px;
-  width: 350px;
-  font-weight: lighter;
-}
-
-.footer > h3:hover {
-  /*estilos de link a las questions*/
-  cursor: pointer;
-  color: #d24ed0;
-}
-
-.content-footer > img:hover {
-  /*estilos redes-sociales */
-  cursor: pointer;
 }
