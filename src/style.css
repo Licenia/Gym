@@ -3,7 +3,9 @@
 ::after {
     box-sizing: border-box;
     margin: 0px;
-}
+    font-family: Raleway;
+  }
+
 
 .container-posicionamiento{
   display: flex;
@@ -104,12 +106,9 @@
 
 .title {
   /* Frase motivadora*/
-  justify-content: center;
-  font-family: Raleway;
-  font-size: 64px;
+  font-size: clamp(1rem ,4vw ,4rem);
   text-align: center;
   margin-bottom: 13px;
-  padding-left: 200px;
 }
 
 .barra-decoration {
@@ -124,98 +123,80 @@
 
 .container-image{
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
   width: 100%;
 }
 
 .image {
   /* imagenes de presentacion */
-  justify-content: space-between;
   width: 390px;
   height: 315px;
-  padding: 20px;
-  margin-left: 75px;
-}
-
-.description {
-  /* Descripcion */
-  background-color: #c1e9e4;
-  border-radius: 30px;
-  width: 980px;
-  height: 80px;
-  padding: 10px;
-  position: absolute;
-  left: 20%;
-  box-shadow: 3px 3px 4px rgba(120, 116, 116, 0.5);
 }
 
 /* GALERIA DE LOS CURSOS */
-
 .title-curses {
   /*Titulo de los cursos*/
-  font-size: 32px;
+  font-size: clamp(1rem, 4vw, 2.5rem);
   margin: 5px 0px;
-  display: flex;
-  position: absolute;
-  top: 0px;
-  right: 300px;
   color: #ffffff;
-}
-
-.title-curses h2 {
-  /*posicionamiento sin margen*/
-  margin: 0;
 }
 
 .content-curses {
   /*Contenedor-cursos*/
   background-color: rgba(176, 140, 189, 0.8);
-  position: relative;
-  top: 100px;
-  margin-top: 60px;
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 70px 0px 30px 0px;
+  text-align: center;
+  padding: 2rem 0;
+  align-items: stretch;
 }
 
-.content-cards,
-.content-card {
+.content-cards {
   /*Contenedores de la galeria*/
   width: 395px;
-  height: 425px;
   background-color: white;
   border-radius: 50px;
-  margin: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-cards {
   /*imagenes*/
   width: 395px;
   height: 259px;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 50px 50px 0 0;
+}
+
+.grupo {
+  margin: 1rem;
+}
+
+.container-text{
+  padding: 1rem;
 }
 
 .content-curses h4 {
   /*Titulos-cursos*/
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  font-family: Sansation Light;
-  font-weight: lighter;
-  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .content-curses p {
   /*Parrafo de los cursos*/
-  margin: 0px 24px;
+  padding: .6rem;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .btn-curses {
   /*Boton de acceder*/
-  margin-top: 20px;
-  margin-left: 90px;
   background-color: black;
   padding: 10px;
   color: white;
@@ -224,6 +205,7 @@
   border-radius: 50px;
   font-size: larger;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-curses:hover {
@@ -233,7 +215,6 @@
 }
 
 /*SLIDER DE IMAGENES*/
-
 .content-slider {
   /*Contenedor del slider*/
   position: relative;
