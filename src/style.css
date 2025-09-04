@@ -209,12 +209,16 @@
 
 
 /*SLIDER DE IMAGENES*/
+.title-instalaciones {
+  padding: 2rem 0 1rem  0;
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 10px;
+  font-weight: normal;
+}
+
 .content-slider {
-  /*Contenedor del slider*/
-  position: relative;
-  top: 200px;
-  left: 75px;
-  width: 90vw;
+  width: 100vw;
   height: 300px;
   overflow: hidden;
 }
@@ -222,11 +226,11 @@
 .content-slider .list-layer {
   display: flex;
   animation: carrusel 30s linear infinite;
-  width: calc(400px * 10);
+  width: calc(600px * 10);
 }
 
 .content-slider .item {
-  width: 400px;
+  width: 600px;
   height: 300px;
   margin-left: 10px;
 }
@@ -246,112 +250,44 @@
   }
 }
 
-.title-instalaciones {
-  /*Titulo de las instalaciones*/
-  display: flex;
-  position: relative;
-}
-
-.title-instalaciones h2 {
-  /*margen-titulo*/
-  position: absolute;
-  top: 150px;
-  left: 660px;
-  font-size: 34px;
-  letter-spacing: 10px;
-  margin-top: 0;
-  font-weight: normal;
-}
-
 /*SECCION DE UBICACION Y HORARIOS*/
-
-.location-image {
-  /*imagen-ubicacion */
-  width: 288px;
-  height: 151px;
+.location-container {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
 }
 
 .content-location {
-  /* contenedor de la ubicacion y horarios*/
-  position: relative;
-  top: 300px;
-  left: 340px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
   border: 1px solid #000;
-  width: 831px;
-  height: 170px;
+   max-width: 700px;
+  width: 100%;
   border-radius: 25px;
-  padding: 8px;
 }
 
-.content-location > h4 {
-  /* selector de hijo directos */
-  display: inline;
-  position: absolute;
-  top: 0px;
-  right: 200px;
+.location-image {
+  /*imagen-ubicacion */
+  max-width: 200px;
+  height: auto;
 }
 
-.position-text1 {
-  /*Posicion del horario 8:00am  a 10:00pm*/
-  display: inline;
-  margin-left: 30px;
-  position: absolute;
-  top: 33px;
-  font-family: Raleway;
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.30rem;
+  font-family: Raleway, sans-serif;
   font-size: 16px;
-  font-weight: 400;
 }
 
-.position-text2 {
-  /*Posicion del horario 8:00am  a 10:00pm*/
-  display: inline;
-  margin-left: 45px;
-  position: absolute;
-  top: 50px;
-  font-family: Raleway;
-  font-size: 14px;
-  font-weight: 200;
+.information h4 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.position-text3 {
-  /*Posicion del horario  lado derecho*/
-  display: inline;
-  margin-left: 30px;
-  position: absolute;
-  top: 33px;
-  right: 52px;
-  font-family: Raleway;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.position-text4 {
-  /* sabados y domingos*/
-  display: inline;
-  margin-left: 45px;
-  position: absolute;
-  top: 52px;
-  right: 50px;
-  font-family: Raleway;
-  font-size: 14px;
-  font-weight: 200;
-}
-
-.position-text5 {
-  /*direccion */
-  position: absolute;
-  top: 100px;
-  left: 500px;
-  font-family: Raleway;
-  font-size: 14px;
-}
-
-.position-text6 {
-  /*direccion-sede */
-  position: absolute;
-  top: 120px;
-  left: 550px;
-  font-family: Raleway;
-  font-size: 14px;
-  font-weight: 200;
+.sub {
+  font-size: 15px;
+  font-weight: 500;
 }
