@@ -136,16 +136,21 @@
 }
 
 /* GALERIA DE LOS CURSOS */
+
 .title-curses {
   /*Titulo de los cursos*/
-  font-size: clamp(1rem, 4vw, 2.5rem);
-  margin: 5px 0px;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding: 1rem 0 0 0;
   color: #ffffff;
 }
 
 .content-curses {
   /*Contenedor-cursos*/
   background-color: rgba(176, 140, 189, 0.8);
+  text-align: center;
+}
+
+.container{
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -153,66 +158,55 @@
   text-align: center;
   padding: 2rem 0;
   align-items: stretch;
+
 }
 
-.content-cards {
-  /*Contenedores de la galeria*/
-  width: 395px;
-  background-color: white;
-  border-radius: 50px;
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-width: 300px;
+  height: auto;
+  background: #fff;
+}
+
+.card-body h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 200px;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
-.image-cards {
-  /*imagenes*/
-  width: 395px;
-  height: 259px;
-  border-radius: 50px 50px 0 0;
-}
-
-.grupo {
-  margin: 1rem;
-}
-
-.container-text{
-  padding: 1rem;
-}
-
-.content-curses h4 {
-  /*Titulos-cursos*/
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.content-curses p {
-  /*Parrafo de los cursos*/
-  padding: .6rem;
-}
-
-.container-btn {
-  display: flex;
-  justify-content: center;
-}
-
-.btn-curses {
-  /*Boton de acceder*/
-  background-color: black;
-  padding: 10px;
-  color: white;
+.btn {
+  display: inline-block;
   font-family: Aboreto;
-  min-width: 207px;
-  border-radius: 50px;
+  text-align: center;
   font-size: larger;
-  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
-.btn-curses:hover {
-  /*estilo del boton*/
-  background-color: #252525;
-  width: 210px;
+.btn:hover {
+  background: #252525;
 }
+
 
 /*SLIDER DE IMAGENES*/
 .content-slider {
