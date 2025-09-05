@@ -1,14 +1,29 @@
-
 /*------------------FOOTER---------------------*/
 
-
 .footer {
-    /* footer*/
-    background-color: #000;
-    position: relative;
-    width: 100%;
-    height: 350px;
-    margin-top: 400px;
+  /* footer*/
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Raleway;
+  padding: 1rem;
+  background-color: #000;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  flex: 1;
+  flex-direction: row;
+}
+
+.info h2 {
+  font-size: clamp(2rem, 10vw, 8rem);
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 
 .content-footer img {
@@ -18,83 +33,34 @@
   padding-right: 5px;
 }
 
-.footer a {
-  text-decoration: none;
-}
-
-.white-text {
-  /* texto-blanco*/
-  color: #ffffff;
-  font-family: Raleway;
-}
-
 .content-footer {
   /*contenedor-footer-social*/
-  display: inline-block;
-  position: absolute;
-  top: 230px;
-  right: 0;
-  height: 100px;
-  margin-right: 10px;
+  text-align: center;
+  align-self: flex-end;
 }
 
 .content-footer h3 {
   /*estilos-Preguntas*/
   font-weight: 200;
-  margin-left: 25px;
 }
 
-.position-gym {
-  /* posicion del texto-gym */
-  position: absolute;
-  left: 600px;
-  font-size: 128px;
-  font-weight: 800;
-  letter-spacing: 5px;
-}
-
-.position-gym a {
+.footer a {
+  text-align: center;
   text-decoration: none;
+}
+
+.footer a {
   color: #ffffff;
 }
 
-.questions {
+.questions span {
   /*estilos-letras-preguntas*/
-  font-size: 25px;
+  display: block;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 200;
 }
 
-.qst-1 {
-  /* posicion-pregunta1*/
-  position: absolute;
-  top: 100px;
-  margin-left: 15px;
-}
-
-.qst-2 {
-  /* posicion-pregunta2*/
-  position: absolute;
-  top: 150px;
-  margin-left: 15px;
-}
-
-.qst-3 {
-  /* posicion-pregunta3*/
-  position: absolute;
-  top: 200px;
-  margin-left: 15px;
-}
-
-.text-copyright {
-  /* estilos-copyright*/
-  position: absolute;
-  top: 290px;
-  right: 400px;
-  width: 350px;
-  font-weight: lighter;
-}
-
-.footer > h3:hover {
+.questions span:hover {
   /*estilos de link a las questions*/
   cursor: pointer;
   color: #d24ed0;
@@ -103,4 +69,24 @@
 .content-footer > img:hover {
   /*estilos redes-sociales */
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column; /* stack vertical en móviles */
+    gap: 1rem; /* espacio entre elementos */
+  }
+
+  .info h2 {
+    text-align: center;
+  }
+
+  .content-footer {
+    align-self: center; 
+  }
+
+  .content-footer img {
+    height: 40px;
+    width: 40px;
+  }
 }
