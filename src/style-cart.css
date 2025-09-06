@@ -1,3 +1,7 @@
+:root{
+    --background-color-inputs:  rgba(151, 225, 222, 0.3);
+    --border-color: rgba(102, 97, 97, 0.5);
+}
 
 *,
 ::before,
@@ -5,25 +9,28 @@
     box-sizing: border-box;
 }
 
-html{
+html, body{
+    height: 100%;
     font-family: "Inter";
-}
-
-body {
     margin: 0;
 }
 
 .container {
-    --background-color-inputs:  rgba(151, 225, 222, 0.3);
-    --border-color: rgba(102, 97, 97, 0.5);
-    display: flex;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    grid-template-rows: 1fr 30%;
+    grid-template-areas:
+     "form services"
+     "footer footer";
+     gap: 1rem;
 }
+
 
 form{
-    max-width: 50%;
+    grid-area: form;
+
 }
-
-
 
 
 input[type="text"] {
@@ -38,13 +45,6 @@ input[type="text"] {
     
 }
 
-.input-telefono {
-    position: relative;
-    bottom: 77px;
-    
-    
-}
-
 input[type="email"] {
     border-radius: 10px;
     margin: 10px;
@@ -56,21 +56,10 @@ input[type="email"] {
     border-width: 1px;
 }
 
-textarea {
-    width: 40%;
-    border-radius: 10px;
-    margin: 10px;
-    resize: none;
-    padding: 10px;
-    background-color: var(--background-color-inputs);
-    border-color: rgba(0, 0, 0, 0.5);
-    border-width: 1px;
-}
-
 /* SEGUNDA SECCION */
 .container-card {
+    grid-area: services;
     margin: 10px;
-    width: 50%;
     border: 1px solid var(--border-color);
 }
 
@@ -83,41 +72,9 @@ p {
 }
 
 h2 {
-    font-weight: 300; /*Define la densidad del texto*/
+    font-weight: 300;
     font-size: 24px;
     margin: 10px;
-}
-
-h4 {
-    font-family: "Julius Sans One";
-    font-size: 16px;
-    font-weight: 300;
-    margin-left:10px ;
-}
-
-.linear {
-    border:  1px solid var(--border-color);
-    width: 130px;
-}
-
-.font-julius {
-    font-family: "Julius Sans One";
-}
-
-.font-raleway {
-    font-family: "Raleway";
-}
-
-
-
-.block {
-    position: relative;
-    left: 260px;
-    bottom: 110px;
-    width: 60%;
-    height: 35%;
-    background-color: #D9D9D9;
-
 }
 
 button {
@@ -132,6 +89,6 @@ button {
     box-shadow: 2px 4px 4px rgba(0, 0,0, 0.25) ;
 }
 
-ul li {
-    list-style: none;
+.footer {
+    grid-area: footer;
 }
