@@ -1,134 +1,103 @@
-/*
-
-*/
-html {
-    /*Fuente de familia */
-    font-family: Raleway, sans-serif;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: Raleway, sans-serif;
 }
 
-body {  /*Reseteo del body*/
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    overflow-y:hidden ;
+html,
+body {
+  height: 100%;
+  background: linear-gradient(135deg, #f3d2fc, #e5b6f5);
 }
 
-.content { /*Contenido-Formulario*/
-    max-width: 32vw;
-    min-width: 400px;
-    height: 100wh;
-    background-color: rgb(243, 210, 252);
-    align-content: center;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
 }
 
-.content h1 { /*Titulo-Registro*/
-    text-align: center;
-    letter-spacing: 1rem;
-    
+.register-form{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(42, 13, 50, 0.2);
+  text-align: center;
+  align-content: center;
+  animation: fadeIn 0.6s ease-in-out; 
 }
 
-
-.content>label {
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-
-
+.register-form h1 {
+  font-size: 2rem;
+  color: #5c2e91;
+  margin-bottom: 1rem;
 }
 
-.content-input { /*Box-input*/
-    display: block;
-    width: 60%;
-    padding: 15px;
-    border-color: #fff;
-    border: none;
-    box-shadow: 1px 1px 5px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
+.form-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem auto;
 }
 
-.content>input:focus { /*Style-box-input*/
-    outline-color: rgba(137, 43, 226, 0.566);
-    border: none;
+.register-form> label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-weight: 600;
 }
 
-.estrella { /*image*/
-    display: block;
-    /*justify-content: center;*/
-    height: 200px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
 
-.button {
-    /*btn-registrarse*/
-    border-color: #fff;
-    margin-top: 1rem;
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: medium;
-    letter-spacing: 2px;
-    display: block;
+.register-form> input:focus {
+  outline: none;
+  border-color: #9955cc;
+  box-shadow: 0 0 8px rgba(153, 85, 204, 0.5);
 }
 
-.button:hover {
-    /*Style-btn-registrarse */
-    background-color: #b6dfe5;
-    cursor: pointer;
-
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #9c27b0, #e040fb);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.contenedor-flex { /*Contendor de formulario y el slider -super importante*/
-    display: flex;
+.submit-btn:hover {
+  background: linear-gradient(135deg, #7b1fa2, #d500f9);
+  transform: scale(1.05);
 }
 
-.content-img { /*contenedor-imagenes*/
-  width: 80vw;
-  overflow: hidden;
-}
-
-
-.list-layer{ /*Contenedor-slider*/
-    display: flex;
-    animation: carrusel 10s  infinite alternate ease-in-out;
-    width: 300%; /*ancho por cada imagen*/
-    height: 100%;
-}
-
-.item { /*contendor-imagenes*/
-   flex: 1; /*ajusta la imagen al contenedor*/
-    height: 100%;
-}
-
-
-.item
-img {  /*Especifica los tamaños de las imagenes*/
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*etiqueta de imagen que cambia el tamaño para asegurarse que sea visible*/
-}
-
-
-
-@keyframes carrusel {
-    0%{
-    margin-left: 0;}
-    30% {margin-left: 0;}
-
-    40%{margin-left: -100%;}
-    60%{
-        margin-left: -100%;}
-
-    70%{
-        margin-left: -200%;}
-    100%{
-        margin-left: -200%;}
-    
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
