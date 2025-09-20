@@ -21,44 +21,39 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form id="payment-form" method="POST">
         <h2>DETALLES DE FACTURACION</h2>
-        <input type="text" placeholder="NOMBRES" />
+        <input name="nombre" type="text" placeholder="NOMBRES" />
         <input type="text" placeholder="APELLIDOS" />
-        <input type="text" placeholder="CIUDAD" />
-        <input type="text" placeholder="PROVINCIA" />
-        <input class="input-telefono" type="text" placeholder="TELEFONO" />
+        <input name="email" type="email"  placeholder="CORREO ELECTRONICO" />
+        <input type="text" placeholder="CEDULA" />
+
+        <button type="submit">Realizar pago</button>
       </form>
 
-      <section class="container-card">
-        <h2>Curso</h2>
-        <p>NOMBRE DEL PRODUCTO , DESCRIPCION</p>
-        <button type="submit">Realizar pago</button>
-
-        <div class="block"></div>
-      </section>
-      
       <footer class="footer">
-      <section class="info">
-        <div class="questions">
-          <span>¿Quienes somos?</span>
-          <span>¿En donde estamos ubicados?</span>
-          <span>Contactanos</span>
-        </div>
-        <h2>GYM</h2>
-        <div class="content-footer">
-          <img src="/public/img/facebook (1).png" alt="" />
-          <img src="/public/img/instagram.png" alt="" />
-          <img src="/public/img/twitter.png" alt="" />
-        </div>
-      </section>
-      <a
-      href="https://licenia.netlify.app/"
-      class="white-text text-copyright"
-      target="_blank"
-      >@CopyRight 2024 - Licenia Alvear</a
-      >
-    </footer>
-  </div>
+        <section class="info">
+          <div class="questions">
+            <span>¿Quienes somos?</span>
+            <span>¿En donde estamos ubicados?</span>
+            <span>Contactanos</span>
+          </div>
+          <h2>GYM</h2>
+          <div class="content-footer">
+            <img src="/public/img/facebook (1).png" alt="" />
+            <img src="/public/img/instagram.png" alt="" />
+            <img src="/public/img/twitter.png" alt="" />
+          </div>
+        </section>
+        <a
+          href="https://licenia.netlify.app/"
+          class="white-text text-copyright"
+          target="_blank"
+          >@CopyRight 2024 - Licenia Alvear</a
+        >
+      </footer>
+    </div>
+
+    <script src="/src/cart.js"></script>
   </body>
 </html>
