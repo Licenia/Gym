@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="src/hamburgers.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/src/footer.css" />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
@@ -31,7 +32,7 @@
         <input class="search-input" type="search" placeholder="Buscar..." />
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a id="cursos" class="navbar-link" href="#cursos">Cursos</a>
+            <a class="navbar-link" href="#cursos">Cursos</a>
           </li>
           <li class="navbar-item">
             <a class="navbar-link" href="#contactanos">Contactanos</a>
@@ -46,6 +47,22 @@
         </ul>
       </div>
     </nav>
+
+    <aside class="panel">
+      <nav class="menu">
+        <a href="#cursos">Cursos</a>
+        <a href="#contactanos">Contactanos</a>
+      </nav>
+    </aside>
+     <button
+        class="btn-hamburger hamburger hamburger--elastic-r"
+        id="btn-hamburger"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
 
     <h2 class="title">¡Hoy es un buen dia para entrenar!</h2>
     <div class="barra-decoration"></div>
@@ -69,7 +86,7 @@
 
     <!— --------------- GALERIA DE LOS CURSOS -------------------------- —>
 
-    <section class="content-curses">
+    <section id="cursos" class="content-curses">
       <h2 class="title-curses">¡CURSOS PARA ALCANZAR TUS METAS!</h2>
       <div class="container">
         <article class="card">
@@ -227,7 +244,7 @@
     </div>
 
     <!— ------------------- UBICACION Y HORARIOS ------------------------ —>
-    <div class="location-container">
+    <div id="contactanos" class="location-container">
       <section class="content-location">
         <img
           class="location-image"
@@ -265,5 +282,6 @@
         >@CopyRight 2024 - Licenia Alvear</a
       >
     </footer>
+    <script src="/src/btn-hamburger.js"></script>
   </body>
 </html>

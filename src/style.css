@@ -1,38 +1,57 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
-    margin: 0px;
-    font-family: Raleway;
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: Raleway;
+}
+
+.btn-hamburger {
+  display: none;
+}
+
+ .panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(34, 34, 34, 0.85);
+  width: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  transform: translate(0, -100%);
   }
 
+  .panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
 
-.container-posicionamiento{
+.navbar-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.container-barra{
+.navbar-content {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
   background-color: #c1e9e4;
   border-radius: 30px;
   box-shadow: 3px 3px 4px rgba(88, 86, 86, 0.5);
   height: 50px;
-  padding: 5px ;
+  padding: 5px;
   width: 80%;
-
 }
 
-.barra-buscar {
-  /*contenedor de la barra de navegacion */
-  display: flex;
-}
-
-.estrella {
+.logo {
   /* Logo de estrella*/
   width: 100px;
   cursor: pointer;
@@ -61,7 +80,7 @@
   background-color: rgba(88, 86, 86, 0.5);
 }
 
-.search-text {
+.search-input {
   /* Contenedor de las busquedas*/
   width: 50%;
   height: 40px;
@@ -72,7 +91,7 @@
   box-shadow: 2px 2px 4px rgb(128, 128, 128, 0.5);
 }
 
-.search-text:focus {
+.search-input:focus {
   /* pseudoclase para darle un borde interno*/
   outline: 3px solid #dfb8e9;
 }
@@ -86,27 +105,29 @@
   background-color: white;
 }
 
-.list {
+.navbar-list {
   /* Lista de navegacion */
+  display: flex;
   align-items: center;
-  cursor: pointer;
+  list-style: none;
+  gap: 2rem;
   padding: 0;
 }
 
-.list-color {
+.navbar-link {
   /*Cambios de estilo a la lista*/
   text-decoration: none;
   color: black;
 }
 
-.list-color:hover {
+.navbar-link:hover {
   /*Cambio de color al ser visitado  */
   color: #d24ed0;
 }
 
 .title {
   /* Frase motivadora*/
-  font-size: clamp(1rem ,4vw ,4rem);
+  font-size: clamp(1rem, 4vw, 4rem);
   text-align: center;
   margin-bottom: 13px;
 }
@@ -122,7 +143,7 @@
   box-shadow: 3px 3px 4px rgba(120, 116, 116, 0.5);
 }
 
-.container-image{
+.container-image {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -151,7 +172,7 @@
   text-align: center;
 }
 
-.container{
+.container {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -159,13 +180,12 @@
   text-align: center;
   padding: 2rem 0;
   align-items: stretch;
-
 }
 
 .card {
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   max-width: 300px;
   height: auto;
   background: #fff;
@@ -208,10 +228,9 @@
   background: #252525;
 }
 
-
 /*SLIDER DE IMAGENES*/
 .title-instalaciones {
-  padding: 2rem 0 1rem  0;
+  padding: 2rem 0 1rem 0;
   text-align: center;
   font-size: 34px;
   letter-spacing: 10px;
@@ -264,7 +283,7 @@
   align-items: center;
   padding: 1rem;
   border: 1px solid #000;
-   max-width: 700px;
+  max-width: 700px;
   width: 100%;
   border-radius: 25px;
 }
@@ -278,7 +297,7 @@
 .information {
   display: flex;
   flex-direction: column;
-  gap: 0.30rem;
+  gap: 0.3rem;
   font-family: Raleway, sans-serif;
   font-size: 16px;
 }
@@ -291,4 +310,47 @@
 .sub {
   font-size: 15px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 360px) {
+  .btn-hamburger {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .menu a {
+    width: inherit;
+    color: #fff;
+    padding: 2rem;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .menu a:hover {
+    width: inherit;
+    font-weight: bold;
+    color: #222;
+    background-color: #c1e9e4;
+  }
+
+  .navbar-container,
+  .barra-decoration,
+  .logo,
+  .search-input {
+    display: none;
+  }
+
 }
