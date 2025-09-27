@@ -337,7 +337,7 @@
 
 .slider a:hover {
   background-color: #111;
-  color:#fff;
+  color: #fff;
 }
 
 /*SECCION DE UBICACION Y HORARIOS*/
@@ -382,47 +382,82 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 360px) {
+.btn-hamburger {
+  position: relative;
+  z-index: 1000;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.menu a {
+  width: inherit;
+  color: #fff;
+  padding: 2rem;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  width: inherit;
+  font-weight: bold;
+  color: #222;
+  background-color: #c1e9e4;
+}
+
+@media screen and (max-width: 768px) {
   .btn-hamburger {
     display: block;
-    position: relative;
-    z-index: 1000;
   }
 
-  .menu {
-    width: 100%;
-    display: flex;
+  .navbar-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content-location {
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     text-align: center;
-    gap: 20px;
   }
 
-  .menu a {
-    width: inherit;
-    color: #fff;
-    padding: 2rem;
-    display: block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  .location-image {
+    max-width: 120px;
+    margin-bottom: 1rem;
   }
 
-  .menu a:hover {
-    width: inherit;
-    font-weight: bold;
-    color: #222;
-    background-color: #c1e9e4;
+  .btn-sesion {
+    min-width: auto;
+    width: 100%;
   }
 
+  .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  
   .navbar-container,
   .logo,
   .search-input {
     display: none;
   }
 
-    .slider-slides {
+  .slider-slides {
     aspect-ratio: 4/3;
     max-height: 300px;
   }
