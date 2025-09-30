@@ -73,6 +73,7 @@ body {
 }
 
 .submit-btn {
+  text-decoration: none;
   width: 100%;
   padding: 12px;
   border-radius: 2rem;
@@ -89,6 +90,16 @@ body {
 .submit-btn:hover {
   background: linear-gradient(135deg, #7b1fa2, #d500f9);
   transform: scale(1.05);
+}
+
+.register-btn {
+  display: block;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #5b7cdc, #0d3a84);
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #7fb2f1, #3c91ad);
 }
 
 @keyframes fadeIn {
