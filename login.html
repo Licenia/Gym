@@ -16,12 +16,13 @@
             <h1>Iniciar Sesion</h1>
             <img class="form-logo" src="img/logo estrella.png">
             <label  for="">Correo electrónico</label>
-            <input  class="form-input" type="email">
+            <input  class="form-input" type="email" data-validate="email" required>
             <label for="">Contraseña</label>
-            <input class="form-input" type="password">
+            <input class="form-input" type="password" data-validate="password" required>
         <input class="submit-btn" type="submit" value="Iniciar sesion">
         <a class="submit-btn register-btn" href="register.html">Registrarse</a>
     </form>
 </div>
+<script type="module" src="./src/index.js"></script>
 </body>
 </html>

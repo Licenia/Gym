@@ -23,10 +23,10 @@
     <div class="container">
       <form id="payment-form" method="POST">
         <h2>DETALLES DE FACTURACION</h2>
-        <input name="nombre" type="text" placeholder="NOMBRES" />
-        <input type="text" placeholder="APELLIDOS" />
-        <input name="email" type="email"  placeholder="CORREO ELECTRONICO" />
-        <input type="text" placeholder="CEDULA" />
+        <input name="nombre" type="text" placeholder="NOMBRE" data-validate="name" required />
+        <input type="text" placeholder="APELLIDO" data-validate="name" required  />
+        <input name="email" type="email"  placeholder="CORREO ELECTRONICO" data-validate="email" required />
+        <input type="text" placeholder="CEDULA" data-validate="cedula" />
 
         <button type="submit">Realizar pago</button>
       </form>
@@ -54,6 +54,6 @@
       </footer>
     </div>
 
-    <script src="/src/cart.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
