@@ -1,5 +1,7 @@
-const form = document.getElementById("payment-form");
 
+export function checkoutSession() {
+  const form = document.getElementById("payment-form");
+  
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -15,3 +17,4 @@ const form = document.getElementById("payment-form");
     const data = await res.json();
     window.location.href = data.url;
   });
+}
