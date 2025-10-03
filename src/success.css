@@ -1,0 +1,32 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background: linear-gradient(to bottom, #277eb0, #091975);
+  background-repeat: no-repeat;
+}
+
+a {
+    margin: 1rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+a:hover {
+  background-color: #222;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
