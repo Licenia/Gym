@@ -30,3 +30,7 @@ a:hover {
   transition: 0.2s ease-in-out;
 }
 
+.err{
+  background: linear-gradient(to bottom, #ff4141, #460a06);
+}
+
