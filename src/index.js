@@ -13,9 +13,22 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
-    if (!validateForm(form)) {
-      e.preventDefault();
-      console.log("Por favor revisa los campos antes de continuar.");
+  e.preventDefault();
+
+  const contenedor = d.querySelector("h2");
+  
+  const spanExistente = d.querySelector(".err");
+  
+  if (spanExistente) {
+    spanExistente.remove()
+  }
+  
+  if (!validateForm(form)) {
+    const span = d.createElement("span");
+    span.classList.add("err")
+    span.textContent = "Por favor revisa los campos antes de continuar."
+      contenedor.insertAdjacentElement("afterend",span)
+      return;
     }
 
     const pass = document.querySelector('input[type="password"]');
