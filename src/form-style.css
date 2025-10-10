@@ -112,3 +112,18 @@ body {
     transform: translateY(0);
   }
 }
+
+input.valid {
+  border: 2px solid green;
+}
+
+input.invalid {
+  border: 2px solid red;
+}
+
+.err {
+  display: block;
+  text-align: center;
+  color: #ce4d4d;
+  font-size: 12px;
+}
