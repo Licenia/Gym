@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import cors from "cors";  
+import cors from "cors";
 import Stripe from "stripe";
 import express from "express";
 
@@ -31,10 +31,10 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   res.sendStatus(200);
 });
 
-
-app.use(cors());
+app.use(cors({
+  origin: "https://mi-gym-app.onrender.com"
+}));
 app.use(express.json());
-
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
@@ -54,8 +54,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: "http://localhost:5173/success.html",
-      cancel_url: "http://localhost:5173/cancel.html",
+      success_url: "https://mi-gym-app.onrender.com/success.html",
+      cancel_url: "https://mi-gym-app.onrender.com/cancel.html",
     });
 
     res.json({ url: session.url });
@@ -64,5 +64,5 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Servidor en http://localhost:3000"));
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
