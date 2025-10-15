@@ -9,7 +9,6 @@ export default defineConfig({
      input: {
         main: resolve(__dirname, 'index.html'),
         cart: resolve(__dirname, 'cart.html'),
-        form: resolve(__dirname, 'form.html'),
         planesPago: resolve(__dirname, 'planesPago.html')
       }
     }
