@@ -440,6 +440,7 @@
   .btn-sesion {
     min-width: auto;
     width: 100%;
+    text-decoration: none;
   }
 
   .navbar-content {
