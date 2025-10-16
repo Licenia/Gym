@@ -9,7 +9,8 @@ export default defineConfig({
      input: {
         main: resolve(__dirname, 'index.html'),
         cart: resolve(__dirname, 'cart.html'),
-        planesPago: resolve(__dirname, 'planesPago.html')
+        planesPago: resolve(__dirname, 'planesPago.html'),
+        login: resolve(__dirname, 'login.html')
       }
     }
   }
