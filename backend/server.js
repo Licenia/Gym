@@ -8,6 +8,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 
+app.use(cors({
+  origin: "https://mi-gym-app.netlify.app"
+}));
+app.use(express.json());
+
+
 app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   const sig = req.headers["stripe-signature"];
   let event;
@@ -31,10 +37,6 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
   res.sendStatus(200);
 });
 
-app.use(cors({
-  origin: "https://mi-gym-app.netlify.app"
-}));
-app.use(express.json());
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
