@@ -21,7 +21,7 @@ try {
       
       const data = await res.json();
       window.location.href = data.url;
-} catch (error) {
+} catch (err) {
   console.error("Error en checkout:", err);
       alert("Ocurrió un error al procesar el pago. Intenta de nuevo.");
   }
