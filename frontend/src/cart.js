@@ -6,7 +6,7 @@ export function checkoutSession() {
     e.preventDefault();
 
 try {
-  const res = await fetch("https://mi-backend.onrender.com/create-checkout-session", {
+  const res = await fetch("https://gym-m0ee.onrender.com/create-checkout-session", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

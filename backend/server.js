@@ -32,7 +32,7 @@ app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
 });
 
 app.use(cors({
-  origin: "https://mi-gym-app.onrender.com"
+  origin: "https://mi-gym-app.netlify.app.com"
 }));
 app.use(express.json());
 
@@ -54,8 +54,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: "https://mi-gym-app.onrender.com/success.html",
-      cancel_url: "https://mi-gym-app.onrender.com/cancel.html",
+      success_url: "https://mi-gym-app.netlify.app.com/success.html",
+      cancel_url: "https://mi-gym-app.netlify.com/cancel.html",
     });
 
     res.json({ url: session.url });
